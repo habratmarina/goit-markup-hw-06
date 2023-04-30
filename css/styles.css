@@ -148,8 +148,7 @@ body {
   opacity: 0;
   transition: opacity var(--animation-timing-function);
 }
-
-.nav-link:hover::after {
+.nav-item .nav-link.current::after {
   opacity: 1;
 }
 
@@ -454,7 +453,11 @@ body {
 
 .button.primary.footer-submit {
   padding: 8px 24px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-submit {
@@ -465,11 +468,7 @@ body {
 .footer-subscribe-icon {
   justify-content: center;
   text-align: center;
-  position: absolute;
   fill: var(--white-color);
-  top: 50%;
-  right: 24px;
-  transform: translateY(-50%);
   display: block;
   transition: fill var(--animation-timing-function);
 }
@@ -629,7 +628,6 @@ body {
   position: absolute;
   width: 100%;
   max-width: 408px;
-  height: 584px;
   background-color: var(--modal-background);
   border-radius: 4px;
   top: 50%;
@@ -784,6 +782,9 @@ body {
   font-size: 12px;
   line-height: 1.17;
   color: rgba(46, 47, 66, 0.4);
+}
+.policy {
+  color: var(--accent-color);
 }
 
 .modal-form-btn:focus {
